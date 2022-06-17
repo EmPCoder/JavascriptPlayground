@@ -14,7 +14,7 @@ js = 'boring'
 if (js === 'boring') alert('JavaScript is BORING');
 
 // Basic Math Operation
-40 + 8 + 25;
+console.log(40 + 8 + 25);
 
 // Logs text to the console
 console.log('Logging text to console');
