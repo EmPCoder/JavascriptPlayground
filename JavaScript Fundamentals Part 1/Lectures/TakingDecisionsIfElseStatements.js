@@ -27,6 +27,6 @@ if(birthYear <= 2000)
     century = `This person was born in the 20th century`;
 }else
 {
-    century = 2`This person was born in the 21st century`;
+    century = `This person was born in the 21st century`;
 }
 console.log(century)
