@@ -2,3 +2,5 @@
 2. Drinking/Voting
 3. Car Rental
 4. Output to a text file.
+5. Avg Calculator
+6. Calculator
