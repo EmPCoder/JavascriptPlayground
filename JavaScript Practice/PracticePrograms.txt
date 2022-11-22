@@ -4,3 +4,4 @@
 4. Output to a text file.
 5. Avg Calculator
 6. Calculator
+7. Budget Tool
