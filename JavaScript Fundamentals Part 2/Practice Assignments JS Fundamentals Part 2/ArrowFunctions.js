@@ -68,6 +68,6 @@ console.log(percentageOfWorld3("Englad", 52.28));
 
 const percentageOfWorld4 = (country, population) => formatter.format(population / 7900) * 100;
 const popChina3 = percentageOfWorld4("China", 1441);
-const popUSA3 = percentageOfWorld4("China", 369);
-const popEngland3 = percentageOfWorld4("China", 52.28);
+const popUSA3 = percentageOfWorld4("USA", 369);
+const popEngland3 = percentageOfWorld4("England", 52.28);
 console.log(popChina3, popUSA3, popEngland3);
