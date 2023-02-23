@@ -18,7 +18,7 @@ function checkWinner(avgDolphins, avgKoalas){
 }
 
 let avgDolphins = calcAverage(44,23,71, "Dolphins 1")
-console.log(avgDolphins);
+console.log(`Dolphins 1 Avg ${avgDolphins}`);
 let avgKoalas = calcAverage(65,54,49, "Koalas 1")
 console.log(avgKoalas);
 
