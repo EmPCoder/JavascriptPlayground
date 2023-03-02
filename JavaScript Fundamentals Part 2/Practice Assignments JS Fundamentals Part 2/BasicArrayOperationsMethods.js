@@ -33,8 +33,9 @@ if (!neighbors.includes('Germany')) {
 //Finds the index of Canada in the Array
 console.log(neighbors.indexOf(['Canada']));
 
-neighbors[neighbors.indexOf('Canada')] = 'OH Canada'
+//Alternate Syntax for Replacing Specified Value in Array.
+// neighbors[neighbors.indexOf('Canada')] = 'OH Canada'
 
 //Replaces value @ index 0 from Canada > OH Canada
-// neighbors[0] = 'OH Canada';
+neighbors[0] = 'OH Canada';
 console.log(neighbors);
