@@ -5,3 +5,5 @@
 5. Avg Calculator
 6. Calculator
 7. Budget Tool
+8. Tip Calculator
+9. Employee Storage
