@@ -17,6 +17,7 @@ const formatter = new Intl.NumberFormat('en-US', {
 
 //Defines array populations and inputs data
 const populations = [10, 369, 52.28, 125.44];
+//Creates empty array called percentages
 const percentages = [];
 
 //Defining function called percentage of world 1 and passing in population as param, then doing the calc to figure out percent of world
@@ -25,6 +26,9 @@ function percentageOfWorld1(population) {
     return formatter.format(population / 7900) * 100;
 }
 
+//For loop that sets i = 0, loops through the data in populations until length is hit,
+//Increments i each time and stores percentage values using percentageOfWorld1 Function
+//Stores value in percentages array @ each position
 for(let i = 0; i < populations.length; i++){
     percentages[i] = percentageOfWorld1(populations[i])
 }
