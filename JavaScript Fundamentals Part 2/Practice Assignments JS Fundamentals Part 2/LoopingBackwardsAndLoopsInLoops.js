@@ -11,15 +11,30 @@ worry if it's too difficult for you! But you can still try to figure this out an
 */
 
 const listOfNeighbours = [
-    ['Canada, Mexico'],
+    ['Canada', 'Mexico'],
     ['Spain'],
-    ['Norway, Sweden, Russia']
+    ['Norway', 'Sweden' , 'Russia']
 ];
 
-for (let i = 0; i < listOfNeighbours.length; i++){
-    // console.log(listOfNeighbours[i]);
+const neighbouringCountries = [
+    ['Canada', 'Mexico']
+];
 
-    for (let y = 0; y < listOfNeighbours[i].length; y++) {
-        console.log(`Neighbor: ${listOfNeighbours[i][y]}`);
+console.log(listOfNeighbours[0]);
+console.log(listOfNeighbours.length);
+
+for (let i = 0; i < neighbouringCountries.length; i++) {
+    // console.log(`Neighbor: ${neighbouringCountries[i]}`);
+
+    for (let y = 0; y < neighbouringCountries[i].length; y++) {
+        console.log(`Neighbor: ${neighbouringCountries[i][y]}`);
     }
 }
+
+// for (let i = 0; i < listOfNeighbours.length; i++){
+//     // console.log(listOfNeighbours[i]);
+
+//     for (let y = 0; y < listOfNeighbours[i].length; y++) {
+//         console.log(`Neighbor: ${listOfNeighbours[i][y]}`);
+//     }
+// }
