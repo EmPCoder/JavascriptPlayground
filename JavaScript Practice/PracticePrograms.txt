@@ -7,3 +7,10 @@
 7. Budget Tool
 8. Tip Calculator
 9. Employee Storage
+10. Reverse (String, Array, Numbers)
+11. Reverse Whatever
+- Check Argument is a num, string, Array
+-- Implement Reversing Number
+-- Implement Reversing String
+-- Implement Reversing Array
+--- Return Reversed Value
