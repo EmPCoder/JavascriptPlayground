@@ -15,3 +15,6 @@
 -- Implement Reversing Array
 --- Return Reversed Value
 12. Temp Converter (Cel, F, Kelvin)
+13. HTML form that has different functions, file upload etc...
+14. Program to order list of strings by Alpha
+15. Random Sports team picker
