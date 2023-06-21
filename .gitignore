@@ -348,4 +348,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
-images/favicon.ico
+
+images/Favicon/favicon.ico
+images/HTML Images/Pokemon Example Image.jpg
+images/HTML Images/Squirtle.jpg
