@@ -25,6 +25,9 @@ let secretNumber = Math.trunc(Math.random()*20)+1
 // Creating variable score and setting = 20.
 let score = 20;
 
+// Declaring variable highScore setting = 0
+let highScore = 0;
+
 // selects the class .check, adds a function that expects and input from the box above the check button
 // outputs whatever number was input into that box to the console.
 document.querySelector('.check').addEventListener('click', function() {
@@ -51,6 +54,12 @@ document.querySelector('.check').addEventListener('click', function() {
 
         // When user guess right number, increases size of Randomly Generated Number.
         document.querySelector('.number').style.width = '30rem';
+
+        // Compares the score & highScore if the current score > highScore sets new highScore
+        if (score > highScore) {
+            highScore = score;
+            document.querySelector('.highscore').textContent = highScore;
+        }
 
         // When the player guesses a number too big
     } else if (guess > secretNumber) {
