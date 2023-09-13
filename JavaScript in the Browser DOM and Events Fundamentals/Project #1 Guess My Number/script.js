@@ -83,7 +83,7 @@ document.querySelector('.check').addEventListener('click', function() {
 
 // Coding Challenge 1
 
-/* Implement a game rest funcitonality, so that the player can make a new guess! Here is how:
+/* Implement a game reset funcitonality, so that the player can make a new guess! Here is how:
 1. Select the element with the 'again' class and attach a click event handler
 2. In the handler function, restore initial values of the score and number variables.
 3. Restore the initial conditions of the message, number, score and guess input field
