@@ -28,6 +28,16 @@ let score = 20;
 // Declaring variable highScore setting = 0
 let highScore = 0;
 
+// Defining var displayMessage and setting it = to document.querySelector('.message').textContent = message
+const displayMessage = function(message) {
+    document.querySelector('.message').textContent = message;
+}
+
+// Defining var displayNumber and setting it = to document.querySelector('.number').textContent = number
+const displayNumber = function(number) {
+    document.querySelector('.number').textContent = number;
+}
+
 // selects the class .check, adds a function that expects and input from the box above the check button
 // outputs whatever number was input into that box to the console.
 document.querySelector('.check').addEventListener('click', function() {
@@ -40,14 +50,15 @@ document.querySelector('.check').addEventListener('click', function() {
 
     // When there is no input
     if(!guess) {
-        document.querySelector('.message').textContent = '⛔ No Number!'
+        // document.querySelector('.message').textContent = '⛔ No Number!'
+        displayMessage('⛔ No Number!')
 
         // When the player wins
     } else if (guess === secretNumber) {
-        document.querySelector('.message').textContent = '🎉 Correct Number!' 
+        displayMessage('🎉 Correct Number!')
 
         // Selecting the number element, and displaying what the random number generated above is.
-        document.querySelector('.number').textContent = secretNumber;
+        displayNumber(secretNumber);
 
         // When user guess right number, body of screen turns RGB color (light green).
         document.querySelector('body').style.backgroundColor = '#60b347';
@@ -61,33 +72,18 @@ document.querySelector('.check').addEventListener('click', function() {
             document.querySelector('.highscore').textContent = highScore;
         }
 
-        // When the player guesses a number too big
-    } else if (guess > secretNumber) {
-        if (score > 1) {
-            document.querySelector('.message').textContent = '📈 Too High!';
-            score = score - 1;
-            document.querySelector('.score').textContent = score;
-        }
-        else {
-            document.querySelector('.message').textContent = '💥 You lost the game, please try again.';
-            document.querySelector('.score').textContent = 0
-        }
-
-        // When the player guesses a number too small
-    } else if (guess < secretNumber) {
-        if (score > 1) {
-            document.querySelector('.message').textContent = '📉 Too Low!';
-            // document.querySelector('body').style.backgroundColor = '#87CEFA';
-            score--;
-            document.querySelector('.score').textContent = score;
-        }
-        else {
-            document.querySelector('.message').textContent = '💥 You lost the game, please try again.';
-            document.querySelector('.score').textContent = 0;
-        }
-
-    }
-    
+        // When the guess is wrong i.e. != secretNumber.
+    } else if (guess !== secretNumber) {
+            if (score > 1) {
+                displayMessage(guess > secretNumber ? '📈 Too High!' : '📉 Too Low!');
+                score = score - 1;
+                document.querySelector('.score').textContent = score;
+            }
+            else {
+                displayMessage('💥 You lost the game, please try again.');
+                document.querySelector('.score').textContent = 0;
+            }
+        }   
 });
 
 // Coding Challenge 1
@@ -103,8 +99,8 @@ document.querySelector('.again').addEventListener('click', function() {
     score = 20;
     secretNumber = Math.trunc(Math.random()*20)+1;
 
-    document.querySelector('.message').textContent = 'Start guessing...';
-    document.querySelector('.number').textContent = '?';
+    displayMessage('Start guessing...');
+    displayNumber('?');
     document.querySelector('.score').textContent = score;
     // Use .value if you want null/empty.
     document.querySelector('.guess').value = " ";
