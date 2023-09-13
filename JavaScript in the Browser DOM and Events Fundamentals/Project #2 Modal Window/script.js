@@ -6,9 +6,44 @@ const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const btnsShowModal = document.querySelectorAll('.show-modal');
 
-console.log(btnsShowModal);
-
-// For loop that logs the text content of each modal element
-for (let i = 0; i < btnsShowModal.length; i++) {
-    console.log(btnsShowModal[i].textContent);
+// Defining cont openModal = to the ability to open the modal.
+const openModal = function() {
+    console.log('Button Clicked');
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
 }
+
+/* For loop that adds a click event listener to each object, also stating that when the btns are 
+clicked to remove the hiddent attributes from the text on the modals and the overlay after the 
+modals are clicked. */
+for (let i = 0; i < btnsShowModal.length; i++) {
+    console.log(btnsShowModal[i].addEventListener('click', openModal));
+}
+
+// Defining cont closeModal = to the ability to close the open modal, either on x button or overlay.
+const closeModal = function(){
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+}
+
+// Calling the function closeModal on both the Button and the Overlay.
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+
+// Allows the modal to be closed on click on either the button or the overlay, violates DRY
+// btnCloseModal.addEventListener('click', function() {
+//     modal.classList.add('hidden');
+//     overlay.classList.add('hidden');
+// });
+
+// Doesn't work because would execute on JS Run
+// btnCloseModal.addEventListener('click', closeModal());
+
+// Uses the closeModal function on the overlay of the screen. Violates DRY
+// overlay.addEventListener('click', function() {
+//     closeModal();
+// });
+
+// modal.classList.remove('hidden');
+// overlay.classList.remove('hidden');
+
