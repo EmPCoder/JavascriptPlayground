@@ -30,20 +30,3 @@ const closeModal = function(){
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
-// Allows the modal to be closed on click on either the button or the overlay, violates DRY
-// btnCloseModal.addEventListener('click', function() {
-//     modal.classList.add('hidden');
-//     overlay.classList.add('hidden');
-// });
-
-// Doesn't work because would execute on JS Run
-// btnCloseModal.addEventListener('click', closeModal());
-
-// Uses the closeModal function on the overlay of the screen. Violates DRY
-// overlay.addEventListener('click', function() {
-//     closeModal();
-// });
-
-// modal.classList.remove('hidden');
-// overlay.classList.remove('hidden');
-
