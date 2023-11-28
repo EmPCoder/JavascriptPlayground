@@ -10,4 +10,5 @@ const diceEl = document.querySelector('.dice');
 //Setting Values of score elements for starting conditions
 score0El.textContent = 0;
 score1El.textContent = 0;
+//Hiding dice by default, by adding hidden class.
 diceEl.classList.add('hidden');
